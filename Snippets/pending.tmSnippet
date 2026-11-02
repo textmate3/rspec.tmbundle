@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>pending "${1:reason}"</string>
+	<key>name</key>
+	<string>pending</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>pending</string>
+	<key>uuid</key>
+	<string>5E725632-F877-4D17-96B6-1336E02F81E7</string>
+</dict>
+</plist>
