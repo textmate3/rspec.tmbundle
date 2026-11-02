@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>${1:var} = mock("${2:mock_name}"${3:, :null_object =&gt; true})
+	<string>${1:collaborator} = double("${2:name}"${3:, ${4:method}: ${5:value}})
 $0</string>
 	<key>name</key>
-	<string>mock</string>
+	<string>double</string>
 	<key>scope</key>
 	<string>source.ruby.rspec</string>
 	<key>tabTrigger</key>
