@@ -17,6 +17,66 @@ module SnippetFiles
   def self.inserting(pattern)
     all.select { |snippet| snippet['content'] =~ pattern }.map { |snippet| snippet['file'] }
   end
+
+  # The should syntax, of rspec-expectations and of rspec-mocks,
+  # is leaving this bundle for a bundle of its own,
+  # and these snippets are held to that bundle's rules, not to these.
+  def self.in_expect_syntax
+    all.reject { |snippet| snippet['content'] =~ /\bshould|\.stub\(/ }
+  end
+end
+
+# What a snippet inserts when every tab stop keeps its default:
+# a placeholder becomes its default, a choice its first option,
+# a mirror the value of the tab stop it mirrors,
+# a transformation or variable a stand in name,
+# and an empty tab stop the filler, nothing or what a person would type.
+class SnippetExpansion
+  require 'strscan'
+
+  def initialize(content, filler:)
+    @scanner = StringScanner.new(content)
+    @filler  = filler
+    @values  = {}
+  end
+
+  def to_s = expand(until_brace: false)
+
+  # The words of every placeholder's default, which stand in for a person's own names.
+  def placeholder_words
+    to_s
+    @values.values.join(' ').scan(/\w+[?!]?/)
+  end
+
+  private
+
+  def expand(until_brace:)
+    out = +''
+    until @scanner.eos?
+      if until_brace && @scanner.check(/\}/)
+        @scanner.skip(/\}/)
+        return out
+      elsif @scanner.scan(/\\(.)/m)
+        out << @scanner[1]
+      elsif @scanner.scan(/\$\{(\w+)\|/)
+        name = @scanner[1]
+        out << (@values[name] = @scanner.scan(/[^,|]*/))
+        @scanner.skip(/[^|]*\|\}/)
+      elsif @scanner.scan(/\$\{(\w+):-?/)
+        name = @scanner[1]
+        out << (@values[name] = expand(until_brace: true))
+      elsif @scanner.scan(/\$\{\w+\/(?:\\.|[^\\\/])*\/(?:\\.|[^\\\/])*\/\w*\}/)
+        out << 'Subject'
+      elsif @scanner.scan(/\$\{(\d+)\}|\$(\d+)/)
+        out << @values.fetch(@scanner[1] || @scanner[2], @filler)
+      elsif @scanner.scan(/\$\{([A-Z_]+)\}|\$([A-Z_]+)/)
+        out << 'Subject'
+      else
+        out << @scanner.getch
+      end
+    end
+    out
+  end
 end
 
 RSpec.describe 'The snippets' do
@@ -26,6 +86,67 @@ RSpec.describe 'The snippets' do
     end
 
     expect(incomplete).to eq([])
+  end
+
+  it 'each have their own tab trigger' do
+    triggers = SnippetFiles.in_expect_syntax.map { |snippet| snippet['tabTrigger'] }.compact
+    shared = triggers.tally.select { |_, count| count > 1 }.keys
+
+    expect(shared).to eq([])
+  end
+
+  it 'insert Ruby that parses, with every tab stop at its default' do
+    require 'prism'
+
+    # An empty tab stop is either left empty, as in instance_double(Object)$0,
+    # or where a person has to type something, as in config.$0.
+    unparsed = SnippetFiles.in_expect_syntax.reject do |snippet|
+      ['', 'filled_in'].any? do |filler|
+        ruby = SnippetExpansion.new(snippet['content'], filler:).to_s
+        # A chained modifier, like .and, needs something to chain to.
+        ruby = "subject#{ruby}" if ruby.start_with?('.')
+        Prism.parse(ruby).success?
+      end
+    end
+
+    expect(unparsed.map { |snippet| snippet['file'] }).to eq([])
+  end
+
+  it 'insert only names an RSpec example or example group defines' do
+    require 'prism'
+
+    # Names RSpec answers through method_missing or a library this suite does not load.
+    elsewhere = %w[
+      be_predicate have_predicate
+      background feature given given! save_and_open_page scenario
+    ]
+
+    undefined = SnippetFiles.in_expect_syntax.flat_map do |snippet|
+      expansion = SnippetExpansion.new(snippet['content'], filler: '')
+      ruby = expansion.to_s
+      ruby = "subject#{ruby}" if ruby.start_with?('.')
+      calls = []
+      queue = [Prism.parse(ruby).value]
+      until queue.empty?
+        node = queue.shift
+        calls << node.name.to_s if node.is_a?(Prism::CallNode) && node.receiver.nil?
+        queue.concat(node.compact_child_nodes)
+      end
+
+      calls.reject do |name|
+        expansion.placeholder_words.include?(name) ||
+          elsewhere.include?(name) ||
+          # Asking respond_to? would let any be_ or have_ name through,
+          # since RSpec turns those into predicate matchers at run time.
+          self.class.method_defined?(name) ||
+          self.class.private_method_defined?(name) ||
+          self.class.respond_to?(name) ||
+          # Modifiers, like and_return or once, chain onto a message expectation.
+          RSpec::Mocks::MessageExpectation.method_defined?(name)
+      end.map { |name| "#{snippet['file']}: #{name}" }
+    end
+
+    expect(undefined).to eq([])
   end
 
   it 'require the helpers by name, as RSpec puts spec on the load path' do

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>a_value_within(${1:delta}).of(${2:expected})</string>
+	<key>name</key>
+	<string>a_value_within</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>a_value_within</string>
+	<key>uuid</key>
+	<string>81C64218-6F43-47DF-B870-51944072C535</string>
+</dict>
+</plist>

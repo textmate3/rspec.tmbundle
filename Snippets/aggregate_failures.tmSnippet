@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>aggregate_failures do
+  $0
+end</string>
+	<key>name</key>
+	<string>aggregate_failures</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>aggregate_failures</string>
+	<key>uuid</key>
+	<string>3F99698A-AE46-4386-8F7B-A8EC390EE97A</string>
+</dict>
+</plist>
