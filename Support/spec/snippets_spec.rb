@@ -42,6 +42,12 @@ class SnippetExpansion
 
   def to_s = expand(until_brace: false)
 
+  # The words of every placeholder's default, which stand in for a person's own names.
+  def placeholder_words
+    to_s
+    @values.values.join(' ').scan(/\w+[?!]?/)
+  end
+
   private
 
   def expand(until_brace:)
@@ -104,6 +110,43 @@ RSpec.describe 'The snippets' do
     end
 
     expect(unparsed.map { |snippet| snippet['file'] }).to eq([])
+  end
+
+  it 'insert only names an RSpec example or example group defines' do
+    require 'prism'
+
+    # Names RSpec answers through method_missing or a library this suite does not load.
+    elsewhere = %w[
+      be_predicate have_predicate
+      background feature given given! save_and_open_page scenario
+    ]
+
+    undefined = SnippetFiles.in_expect_syntax.flat_map do |snippet|
+      expansion = SnippetExpansion.new(snippet['content'], filler: '')
+      ruby = expansion.to_s
+      ruby = "subject#{ruby}" if ruby.start_with?('.')
+      calls = []
+      queue = [Prism.parse(ruby).value]
+      until queue.empty?
+        node = queue.shift
+        calls << node.name.to_s if node.is_a?(Prism::CallNode) && node.receiver.nil?
+        queue.concat(node.compact_child_nodes)
+      end
+
+      calls.reject do |name|
+        expansion.placeholder_words.include?(name) ||
+          elsewhere.include?(name) ||
+          # Asking respond_to? would let any be_ or have_ name through,
+          # since RSpec turns those into predicate matchers at run time.
+          self.class.method_defined?(name) ||
+          self.class.private_method_defined?(name) ||
+          self.class.respond_to?(name) ||
+          # Modifiers, like and_return or once, chain onto a message expectation.
+          RSpec::Mocks::MessageExpectation.method_defined?(name)
+      end.map { |name| "#{snippet['file']}: #{name}" }
+    end
+
+    expect(undefined).to eq([])
   end
 
   it 'require the helpers by name, as RSpec puts spec on the load path' do
