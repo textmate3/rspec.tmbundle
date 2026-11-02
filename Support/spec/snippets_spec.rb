@@ -44,5 +44,9 @@ RSpec.describe 'The snippets' do
     it 'such as controller_name, from RSpec 1' do
       expect(SnippetFiles.inserting(/\bcontroller_name\b/)).to eq([])
     end
+
+    it 'such as mock_model, which moved to the rspec-activemodel-mocks gem' do
+      expect(SnippetFiles.inserting(/\bmock_model\b/)).to eq([])
+    end
   end
 end
