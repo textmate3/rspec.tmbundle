@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>expect { |block| ${1:object.method}(&amp;block) }.to yield_control</string>
+	<key>name</key>
+	<string>yield_control</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>yield_control</string>
+	<key>uuid</key>
+	<string>47C09F48-A0D7-4AAA-890E-062D6138A221</string>
+</dict>
+</plist>

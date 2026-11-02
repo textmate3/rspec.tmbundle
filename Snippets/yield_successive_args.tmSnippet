@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>expect { |block| ${1:object.method}(&amp;block) }.to yield_successive_args(${2:arguments})</string>
+	<key>name</key>
+	<string>yield_successive_args</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>yield_successive_args</string>
+	<key>uuid</key>
+	<string>4EECDA26-EAD0-4CA1-9F3E-8671859C001F</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>change { ${1:object.value} }.by(${2:delta})</string>
+	<key>name</key>
+	<string>change by</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>change_by</string>
+	<key>uuid</key>
+	<string>CD4628D8-4F29-47B3-BADC-67AF8E82440B</string>
+</dict>
+</plist>

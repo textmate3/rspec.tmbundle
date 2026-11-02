@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>be_between(${1:min}).and(${2:max})</string>
+	<key>name</key>
+	<string>be_between</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>be_between</string>
+	<key>uuid</key>
+	<string>0BAE45A0-0283-4BBE-91B4-965C24EC49B6</string>
+</dict>
+</plist>

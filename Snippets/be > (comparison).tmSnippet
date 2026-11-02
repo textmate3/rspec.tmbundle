@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>be ${1|&gt;,&gt;=,&lt;,&lt;=|} ${2:value}</string>
+	<key>name</key>
+	<string>be &gt; (comparison)</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>be_compared</string>
+	<key>uuid</key>
+	<string>C13A3C6C-1869-42C6-8E2D-CE3DE57DEEB9</string>
+</dict>
+</plist>
