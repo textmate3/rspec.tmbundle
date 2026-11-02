@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>expect(${1:object}).to have_received(:${2:message})$0</string>
+	<key>name</key>
+	<string>expect to have_received</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>have_received</string>
+	<key>uuid</key>
+	<string>33FB7CE9-E8D3-40DC-A0FD-263E7E7E5B24</string>
+</dict>
+</plist>

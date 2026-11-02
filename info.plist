@@ -52,6 +52,65 @@
 		</array>
 		<key>submenus</key>
 		<dict>
+			<key>E0CA9A23-1E3B-43E5-8458-8F38E88A03FD</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>E17EB17A-A5A2-4DD3-B231-8F96231516FA</string>
+					<string>CE5A5D66-102B-4F29-B6CF-7888D4F43B0E</string>
+					<string>------------------------------------</string>
+					<string>1B8E5205-A0D5-49CE-A65E-A9700E1DE7F6</string>
+					<string>ED5066A2-829A-4D1B-8EAA-23B152F3C7D2</string>
+					<string>DBC30DFE-C98F-4D0A-A020-0780691444A9</string>
+					<string>77293E19-8575-4A70-A71A-FA86724225D9</string>
+				</array>
+				<key>name</key>
+				<string>Doubles</string>
+			</dict>
+			<key>B26C2CED-0F59-4132-A5B4-518EF5674E73</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>9081A2D8-3D84-4E1E-92FB-41E30B6FEDF7</string>
+					<string>994277A2-32EA-4149-9305-88CBC49C6A83</string>
+					<string>------------------------------------</string>
+					<string>FD521001-4AE0-4C3A-B434-1D03B061CD7C</string>
+					<string>D1F49B15-1EEF-4CEA-81F3-C3ADCE2C9774</string>
+				</array>
+				<key>name</key>
+				<string>Stubs</string>
+			</dict>
+			<key>30194A59-8040-490D-B506-E92EC4EE31A6</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>40D6D05B-6DDA-4B31-AAE1-8178AEC3F7CD</string>
+					<string>4BD7F6E2-0F1E-4F37-B5EC-4FE3659A7728</string>
+				</array>
+				<key>name</key>
+				<string>Constants</string>
+			</dict>
+			<key>FA886AF1-5EA9-4C25-925D-4AFAD9EB6B5F</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>163DEEF6-E0EA-40EA-9D9B-36A6F5387F7A</string>
+					<string>05546362-030E-442C-9F05-2C692FDDB799</string>
+					<string>1B027408-3CA4-41F3-9C0A-0180FE31FE59</string>
+					<string>------------------------------------</string>
+					<string>F631D5A7-CC77-4A10-A610-ED260E5C3F40</string>
+					<string>E2AA9794-32F8-4130-B7B5-99D4990F0970</string>
+					<string>E9E55A3A-3EC9-45AF-8B5A-09A1480F12C0</string>
+					<string>5EAEBABB-F5A8-45F4-B215-C33271527FE2</string>
+					<string>------------------------------------</string>
+					<string>88F9906D-1E90-4745-A1FB-311EA0931FF5</string>
+					<string>C8E7D356-3584-4652-8ED5-4967A8F48DED</string>
+					<string>C851FB72-495F-49A4-AE01-94BD5C05B917</string>
+					<string>3A5A7B8D-6AAD-4595-A25E-790FDD861074</string>
+				</array>
+				<key>name</key>
+				<string>Argument Matchers</string>
+			</dict>
 			<key>C4D3C3D7-50A8-4178-85F5-1CEA9E9BB6B3</key>
 			<dict>
 				<key>items</key>
@@ -223,6 +282,10 @@
 					<string>65B85B0D-26FC-4A08-8D6A-7BF00AA787FC</string>
 					<string>2CC293EE-496A-4B66-928C-332DDCBEE884</string>
 					<string>ED3A9BE5-8695-44FF-9B6B-A7FF4C13727C</string>
+					<string>------------------------------------</string>
+					<string>71111A2F-2D18-43EA-A629-D9CBC9182446</string>
+					<string>7AED962B-3F23-4836-ACA1-5D6E5A0582C7</string>
+					<string>894A7332-B61E-4C2D-B5F6-BD875E20CBF9</string>
 				</array>
 				<key>name</key>
 				<string>Responses</string>
@@ -267,6 +330,10 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>0AD940C2-6D7A-457C-B6A6-9FD8FA4E6B32</string>
+					<string>CFAF100A-D058-4228-9CAB-06F468CA2839</string>
+					<string>33FB7CE9-E8D3-40DC-A0FD-263E7E7E5B24</string>
+					<string>------------------------------------</string>
 					<string>0A7E08E5-4756-49BA-B015-FB3A4D11EA45</string>
 					<string>4CBCCACF-D6DA-49A6-9A8E-EC2F9CD15E94</string>
 					<string>3F3E8066-8C1A-40D1-85C7-9DC18C6A34BA</string>
@@ -308,10 +375,15 @@
 				<key>items</key>
 				<array>
 					<string>AA3D9F87-FE8F-4808-A732-F368CCB9DED6</string>
+					<string>E0CA9A23-1E3B-43E5-8458-8F38E88A03FD</string>
 					<string>------------------------------------</string>
 					<string>8FC76AC7-715E-4432-BFAE-020862F3E080</string>
+					<string>B26C2CED-0F59-4132-A5B4-518EF5674E73</string>
 					<string>9CAF7166-4897-4159-837D-E9F2BDA77751</string>
 					<string>52DCA708-EFE0-4376-8DBE-EF9101835C79</string>
+					<string>------------------------------------</string>
+					<string>FA886AF1-5EA9-4C25-925D-4AFAD9EB6B5F</string>
+					<string>30194A59-8040-490D-B506-E92EC4EE31A6</string>
 				</array>
 				<key>name</key>
 				<string>Mocks</string>
@@ -320,13 +392,17 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>D08817C4-9026-4E03-8709-1770CB2A00AE</string>
 					<string>695ECDF3-FEFC-4702-AF71-641E64017907</string>
 					<string>85E6D1EE-74A4-4B4A-8A00-942B788FF599</string>
+					<string>3FB2503C-CDBA-4D9E-9022-495AEAC519E2</string>
 					<string>1A3662E4-DB9D-4F29-8E42-984755A419FA</string>
 					<string>------------------------------------</string>
 					<string>F2FDA911-B713-4788-81BF-EF33E9A4FB26</string>
 					<string>------------------------------------</string>
 					<string>9A891C8D-4285-4C7D-BA03-6CA50A89F9C0</string>
+					<string>------------------------------------</string>
+					<string>AD2644AF-FED9-40B6-99B8-D5E7153D32F8</string>
 				</array>
 				<key>name</key>
 				<string>Receive Counts</string>
