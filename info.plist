@@ -40,7 +40,6 @@
 			<string>0BD5A07E-5FB3-44A3-991F-ABA04BA632D7</string>
 			<string>7563CED5-5FD8-454C-972C-AC240D549E8B</string>
 			<string>1D0BB312-A029-4A43-A024-EF6C03506CEC</string>
-			<string>E71599F8-CBE4-4D08-BC3F-FC785C5860D0</string>
 			<string>65164339-1174-4EBB-A137-2DC6F8294890</string>
 			<string>C4DD43A2-7E6A-4875-AF86-7EF7963BF83D</string>
 			<string>E9B757B8-B39B-41A9-B7F9-F1B58764E422</string>
@@ -162,8 +161,6 @@
 				<array>
 					<string>DAD2B74D-2105-42B0-9FC5-466F3B3D0DB7</string>
 					<string>------------------------------------</string>
-					<string>57374EB7-6CCE-4281-97A7-289905315351</string>
-					<string>FC8C2948-3653-41B3-965A-5D0B7C64CB41</string>
 					<string>0ED99C84-1F7B-471E-BB88-B59C5D08FA6B</string>
 					<string>------------------------------------</string>
 					<string>057F2FA2-7958-4432-8ACD-26486D0CFD09</string>
@@ -211,7 +208,6 @@
 					<string>F2FDA911-B713-4788-81BF-EF33E9A4FB26</string>
 					<string>------------------------------------</string>
 					<string>9A891C8D-4285-4C7D-BA03-6CA50A89F9C0</string>
-					<string>D5E64C38-9CBC-4825-9A66-5718DA91AAD6</string>
 				</array>
 				<key>name</key>
 				<string>Receive Counts</string>
