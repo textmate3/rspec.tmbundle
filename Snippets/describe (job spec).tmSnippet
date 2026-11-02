@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>RSpec.describe ${1:Job}, type: :job do
+  $0
+end</string>
+	<key>name</key>
+	<string>describe (job spec)</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>describe_job</string>
+	<key>uuid</key>
+	<string>5FBC2AE3-5FBC-4135-BA99-2A9AA7A812B8</string>
+</dict>
+</plist>

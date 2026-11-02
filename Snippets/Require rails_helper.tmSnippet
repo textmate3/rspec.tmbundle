@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>require "rails_helper"
+</string>
+	<key>name</key>
+	<string>Require rails_helper</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>rails_helper</string>
+	<key>uuid</key>
+	<string>0D4E14DE-75AC-4E6D-8F50-310EDACCB150</string>
+</dict>
+</plist>

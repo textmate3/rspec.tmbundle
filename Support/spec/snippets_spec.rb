@@ -116,10 +116,18 @@ RSpec.describe 'The snippets' do
     require 'prism'
 
     # Names RSpec answers through method_missing or a library this suite does not load.
-    elsewhere = %w[
-      be_predicate have_predicate
-      background feature given given! save_and_open_page scenario
+    # Loading rspec-rails takes a Rails application,
+    # so its names were checked against the rspec-rails 8.0.4 source instead.
+    predicates = %w[be_predicate have_predicate]
+    capybara   = %w[background feature given given! save_and_open_page scenario]
+    rspec_rails = %w[
+      at be_a_new be_new_record be_routable be_valid driven_by
+      have_been_enqueued have_been_performed have_broadcasted_to have_enqueued_job
+      have_enqueued_mail have_http_status have_performed_job have_stream_for
+      have_stream_from on_queue receive_inbound_email redirect_to render_template
+      route_to send_email
     ]
+    elsewhere = predicates + capybara + rspec_rails
 
     undefined = SnippetFiles.in_expect_syntax.flat_map do |snippet|
       expansion = SnippetExpansion.new(snippet['content'], filler: '')

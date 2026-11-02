@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>have_stream_for(${1:object})</string>
+	<key>name</key>
+	<string>have_stream_for</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>have_stream_for</string>
+	<key>uuid</key>
+	<string>C41E6D2B-FE1C-4864-8E17-55713DD78785</string>
+</dict>
+</plist>

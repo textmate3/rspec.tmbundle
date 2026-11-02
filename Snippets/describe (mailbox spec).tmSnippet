@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>RSpec.describe ${1:Mailbox}, type: :mailbox do
+  $0
+end</string>
+	<key>name</key>
+	<string>describe (mailbox spec)</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>describe_mailbox</string>
+	<key>uuid</key>
+	<string>0F42287D-2573-4905-8F5F-1A7C737D47B3</string>
+</dict>
+</plist>
