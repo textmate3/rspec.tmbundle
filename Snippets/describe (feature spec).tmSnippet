@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>RSpec.describe "${1:Feature}", type: :feature do
+  $0
+end</string>
+	<key>name</key>
+	<string>describe (feature spec)</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>describe_feature</string>
+	<key>uuid</key>
+	<string>54B30FFC-30D6-48A2-A172-3E66BEA32628</string>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>have_enqueued_mail(${1:Mailer}, :${2:method})</string>
+	<key>name</key>
+	<string>have_enqueued_mail</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>have_enqueued_mail</string>
+	<key>uuid</key>
+	<string>35CA78F6-552C-4FFC-9B0E-9A15154A19A1</string>
+</dict>
+</plist>

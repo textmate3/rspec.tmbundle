@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>RSpec.describe ${1:UserMailer}, type: :mailer do
+  $0
+end</string>
+	<key>name</key>
+	<string>describe (mailer spec)</string>
+	<key>scope</key>
+	<string>source.ruby.rspec</string>
+	<key>tabTrigger</key>
+	<string>describe_mailer</string>
+	<key>uuid</key>
+	<string>AED63482-8740-4621-89BB-5E853249ACF3</string>
+</dict>
+</plist>
