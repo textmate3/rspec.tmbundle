@@ -28,6 +28,10 @@ RSpec.describe 'The snippets' do
     expect(incomplete).to eq([])
   end
 
+  it 'require the helpers by name, as RSpec puts spec on the load path' do
+    expect(SnippetFiles.inserting(/File\.dirname\(__FILE__\)/)).to eq([])
+  end
+
   describe 'insert nothing RSpec 3 removed' do
     it 'such as any_number_of_times, which allow replaces' do
       expect(SnippetFiles.inserting(/\bany_number_of_times\b/)).to eq([])
